@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "marvin",
+  "title": "Marvin",
+  "description": "Marvin — Raycast extension template",
+  "icon": "icon.png",
+  "author": "cyb1ove",
+  "license": "MIT",
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "list-items",
+      "title": "List Items",
+      "subtitle": "Marvin",
+      "description": "Searchable list with detail view and actions",
+      "mode": "view"
+    },
+    {
+      "name": "quick-action",
+      "title": "Quick Action",
+      "subtitle": "Marvin",
+      "description": "Runs in the background and shows a HUD",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "text",
+          "placeholder": "Text",
+          "type": "text",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "greeting",
+      "title": "Greeting",
+      "description": "Prefix used by Quick Action",
+      "type": "textfield",
+      "required": false,
+      "default": "Hello"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.12.0",
+    "@raycast/utils": "^2.3.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "eslint": "^10.14.0",
+    "prettier": "^3.10.1",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
